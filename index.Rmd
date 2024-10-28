@@ -1,0 +1,14 @@
+---
+title: "Hello!! :-)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+# Welcome to my personal website
+
+![](https://media.giphy.com/media/k3kqJ2d8cUvSM/giphy.gif?cid=790b7611cv6b4upvgmben210i123oa31qyhd9x6on72zqi0z&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
+
