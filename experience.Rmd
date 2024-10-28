@@ -1,0 +1,75 @@
+---
+title: "Experience"
+output:
+ html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+## Contact Information
+**Email:** mbi2110@cumc.columbia.edu  
+**LinkedIn:** https://www.linkedin.com/in/miaisaacs/
+
+# Education
+
+## Master of Public Health in Epidemiology  
+**Columbia University | New York, NY | Expected May 2025**
+
+- Certificate in Applied Biostatistics and Public Health Data Science
+
+- Relevant Coursework: Applied Regression I and II, Data Science I, Applied Epidemiologic Analysis, Application of Epidemiologic Research Methods, Analysis of Categorical Data, Design and Conduct of Observational Epidemiology
+
+## Bachelor of Science in Microbiology
+**University of Pittsburgh | Pittsburgh, PA | April 2023**
+
+- Minor in Chemistry, Certificate in Global Health
+
+- Relevant Coursework: Applied Statistical Methods, Analytic Geometry and Calculus I
+
+- Awards:Magna Cum Laude, Dean's List Fall 2020, Spring 2021, Spring 2022, Spring 2023
+
+# Experience
+
+## Quantitative Research Methods Teaching Assistant  
+**Columbia University | New York, NY | September 2024 - Present**  
+
+- Facilitates lab sessions and office hours for up to 25 first year students to solidify epidemiology and biostatistics concepts.
+
+- Participates in weekly team meetings and maintains consistent communication with lead TAs and course instructors.
+
+- Grades student homework assignments and provides feedback on upcoming assessments to ensure clarity and accuracy.
+
+- Maintains a code of confidentiality when overseeing academic content and handling sensitive student information.
+
+## Data Monitoring, Assurance, and Control Intern  
+**ICAP at Columbia University | Harlem Prevention Center, NYC | May 2024 - August 2024**  
+
+- Conducted data monitoring, quality control, and quality assurance on data collected for multiple studies.
+
+- Assisted in summarizing data and preparation of presentations for scientific meetings. 
+
+- Developed research questions of interest utilizing available site data from completed studies to conduct analyses.
+
+- Participated in site recruitment events and brainstormed improvements for recruitment strategy. 
+
+- Completed all research activities in accordance with study protocol, standard operating procedures and other appropriate institutional regulations, procedures and policies.
+
+## Sleep and Behavioral Neuroscience Research Assistant
+**UPMC Western Psychiatric Hospital | Pittsburgh, PA | September 2021 - July 2023**
+
+- Worked both independently and collaboratively in a fast-paced clinical laboratory environment. 
+
+- Executed wire-ups with minimal error while ensuring the best quality customer service for participants.
+
+- Collected biological samples and survey data with high attention to detail. 
+
+- Studied the interpretation of polysomnography data alongside sleep technicians. 
+
+- Exceeded personal and department goals through effective task prioritization and great work ethic.
+
+# Skills
+- **Data Analysis and Computer:** R, SAS, STATA, MS Office Suite
+- **Research Methodology:** Regression Modeling, Survival Analysis
+- **Certifications:** CITI Human Subjects Protection and HIPAA Patient Privacy	
+
