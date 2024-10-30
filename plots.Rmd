@@ -13,3 +13,95 @@ library(tidyverse)
 library(p8105.datasets)
 library(plotly)
 ```
+
+```{r}
+data("rest_inspec")
+
+summary(rest_inspec)
+```
+
+```{r}
+rest_inspec |> 
+  mutate(inspection_date = as.Date(inspection_date)) |> 
+  filter(!is.na(inspection_date),
+         !is.na(critical_flag),
+         boro != "Missing",
+         cuisine_description != "Not Listed/Not Applicable",
+         format(inspection_date, "%Y") == "2017",
+         cuisine_description %in% c("Salads", "Pizza", "Sandwiches", "Bakery", "Bagels/Pretzels")) |> 
+  group_by(cuisine_description, boro) |>
+  summarise(
+    critical_count = sum(critical_flag == "Critical"),
+    total_count = n(),
+    proportion = critical_count / total_count,
+    .groups = 'drop'
+  ) |> 
+  plot_ly(x = ~cuisine_description, y = ~proportion, color = ~boro, type = "bar") |> 
+  layout(
+    title = "Proportion of Critical Violations by Type of Cuisine and Borough in 2017",
+    xaxis = list(title = "Cuisine Description"),
+    yaxis = list(title = "Proportion of Critical Violations")
+  )
+```
+
+```{r}
+box_ggplot =
+rest_inspec |> 
+  mutate(inspection_date = as.Date(inspection_date),
+         year = year(inspection_date)) |> 
+  filter(year(inspection_date) == 2017,
+         boro != "Missing") |> 
+  ggplot(aes(x = boro, y = score, fill = boro)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(title = "Box Plot of Scores by Borough in 2017",
+       x = "Borough",
+       y = "Score") +
+     ylim(0, NA)
+
+ggplotly(box_ggplot)
+```
+
+```{r}
+top_cuisines <- rest_inspec %>%
+  group_by(cuisine_description) %>%      # Group by cuisine description
+  summarise(count = n()) %>%              # Count the number of observations for each cuisine
+  arrange(desc(count)) %>%                 # Arrange in descending order of count
+  slice_head(n = 5)                        # Take the top 5 cuisines
+
+# Display the top 5 cuisines
+print(top_cuisines)
+```
+
+```{r}
+american_data <- rest_inspec |> 
+  filter(cuisine_description == "American", !is.na(grade),
+         grade != "Not Yet Graded",
+         grade != "P")
+
+grade_distribution <- american_data |> 
+  group_by(boro, grade) |> 
+  summarise(count = n(), .groups = 'drop')
+
+total_counts <- grade_distribution |> 
+  group_by(boro) |> 
+  summarise(total = sum(count), .groups = 'drop')
+
+grade_distribution <- grade_distribution |> 
+  left_join(total_counts, by = "boro") |> 
+  mutate(proportion = count / total)
+
+bar_plot <- plot_ly(data = grade_distribution, 
+                    x = ~boro, 
+                    y = ~proportion,
+                    color = ~grade, 
+                    type = 'bar') |> 
+  layout(title = "Proportion of Grades for American Cuisine by Borough",
+         xaxis = list(title = "Borough"),
+         yaxis = list(title = "Proportion"),
+         barmode = 'stack',  # Use stacked bars for better visualization
+         legend = list(title = list(text = "Grade")))
+
+bar_plot
+```
+
