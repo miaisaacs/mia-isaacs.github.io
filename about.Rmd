@@ -1,9 +1,16 @@
 ---
 title: "About"
+output:
+ html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
 ---
 
 ### About this site
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+This website was generated in accordance with homework guidelines for the Data Science I course at Columbia University Mailman School of Public Health (P8150) taught by Dr. Jeff Goldsmith.
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+To produce the elements of this site, the tidyverse, plotly, and flexdashboard packages were utilized in R Studio. The site is hosted on [GitHub](https://github.com/miaisaacs), where the source code can also be found. 
+
+Thank you for visiting this site and feel free to contact me using the e-mail link at the top of this page!

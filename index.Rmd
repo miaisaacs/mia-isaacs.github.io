@@ -11,7 +11,7 @@ output:
 
 ![](https://media.giphy.com/media/k3kqJ2d8cUvSM/giphy.gif?cid=790b7611cv6b4upvgmben210i123oa31qyhd9x6on72zqi0z&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
-My name is Mia Isaacs and I'm a second-year MPH student at Columbia University. 
+My name is Mia Isaacs and I'm a second-year MPH student at Columbia University studying epidemiology with a certificate in Applied Biostatistics and Public Health Data Science.
 
 This website was made for the Data Science I course (P8105) at the Mailman School of Public Health. 
 

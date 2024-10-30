@@ -27,7 +27,7 @@ output:
 
 - Relevant Coursework: Applied Statistical Methods, Analytic Geometry and Calculus I
 
-- Awards:Magna Cum Laude, Dean's List Fall 2020, Spring 2021, Spring 2022, Spring 2023
+- Awards: Magna Cum Laude, Dean's List Fall 2020, Spring 2021, Spring 2022, Spring 2023
 
 # Experience
 
