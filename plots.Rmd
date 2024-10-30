@@ -8,17 +8,17 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
-
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
-```
 
-```{r}
 data("rest_inspec")
-
-summary(rest_inspec)
 ```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 rest_inspec |> 
@@ -44,6 +44,11 @@ rest_inspec |>
   )
 ```
 
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Chart B
+
 ```{r}
 box_ggplot =
 rest_inspec |> 
@@ -57,21 +62,13 @@ rest_inspec |>
   labs(title = "Box Plot of Scores by Borough in 2017",
        x = "Borough",
        y = "Score") +
-     ylim(0, NA)
+   ylim(0, 50) +
+   guides(fill = "none")
 
 ggplotly(box_ggplot)
 ```
 
-```{r}
-top_cuisines <- rest_inspec %>%
-  group_by(cuisine_description) %>%      # Group by cuisine description
-  summarise(count = n()) %>%              # Count the number of observations for each cuisine
-  arrange(desc(count)) %>%                 # Arrange in descending order of count
-  slice_head(n = 5)                        # Take the top 5 cuisines
-
-# Display the top 5 cuisines
-print(top_cuisines)
-```
+### Chart C
 
 ```{r}
 american_data <- rest_inspec |> 
@@ -104,4 +101,3 @@ bar_plot <- plot_ly(data = grade_distribution,
 
 bar_plot
 ```
-
